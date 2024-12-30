@@ -17,6 +17,7 @@
   "dependencies": {
     "@ionic/react": "^8.4.1",
     "@ionic/react-router": "^8.4.1",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "shared-components": "^1.0.0"
   }
 }
