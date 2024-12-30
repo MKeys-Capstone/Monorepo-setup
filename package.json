@@ -1,0 +1,17 @@
+{
+  "name": "monorepo-setup",
+  "version": "1.0.0",
+  "description": "Test Ionic/React monorepo setup to have two apps with a shared component lib.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ]
+}
