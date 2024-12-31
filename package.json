@@ -1,15 +1,14 @@
 {
   "name": "monorepo-setup",
   "version": "1.0.0",
-  "description": "Test Ionic/React monorepo setup to have two apps with a shared component lib.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "private": true,
+  "description": "Test Ionic/React monorepo setup to have two apps with a shared component lib.",
+  "scripts": {
+    "start:external": "cd apps/external-portal && ionic serve",
+    "start:internal": "cd apps/internal-portal && ionic serve",
+    "start:all": "concurrently \"npm run start:external\" \"npm run start:internal\"",
+    "install-both": "npm install --workspaces"
+  },
   "workspaces": [
     "apps/*",
     "libs/*"
@@ -17,7 +16,9 @@
   "dependencies": {
     "@ionic/react": "^8.4.1",
     "@ionic/react-router": "^8.4.1",
-    "react-router-dom": "^5.3.4",
-    "shared-components": "^1.0.0"
+    "react-router-dom": "^5.3.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.1"
   }
 }
