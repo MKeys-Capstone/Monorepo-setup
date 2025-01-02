@@ -4,8 +4,8 @@
   "private": true,
   "description": "Test Ionic/React monorepo setup to have two apps with a shared component lib.",
   "scripts": {
-    "start:external": "cd apps/external-portal && ionic serve",
-    "start:internal": "cd apps/internal-portal && ionic serve",
+    "start:external": "cd apps/external-portal/external-portal && ionic serve",
+    "start:internal": "cd apps/internal-portal/internal-portal && ionic serve",
     "start:all": "concurrently \"npm run start:external\" \"npm run start:internal\"",
     "install-both": "npm install --workspaces"
   },

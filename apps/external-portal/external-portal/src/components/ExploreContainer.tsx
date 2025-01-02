@@ -1,12 +1,35 @@
-import React from 'react';
-import './ExploreContainer.css';
+import React, { Children } from "react";
+import "./ExploreContainer.css";
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from "@ionic/react";
+import { FormCard, Button } from "shared-components";
 
 const ExploreContainer: React.FC = () => {
+  const last = "asdasd";
+  const handleFormSubmit = (firstName: string, lastName: string) => {
+    console.log("Form submitted with:", { firstName, lastName });
+    // Here you can process the data, like sending it to an API
+  };
+
   return (
-    <div id="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    </div>
+    <>
+      <IonPage>
+        <IonHeader>
+          <IonToolbar>
+            <IonTitle>Form Card Example</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        <IonContent>
+          
+        </IonContent>
+      </IonPage>
+    </>
   );
 };
 
